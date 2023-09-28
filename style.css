@@ -1,0 +1,101 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+
+}
+.container{
+    position: relative;
+    width: auto;
+    height: 100vh;
+}
+.logoNav{
+    display: flex;
+    align-items: center;
+    margin-top: -2vh;
+}
+.clgName{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+h1{
+    margin-left: 10vw;
+    font-weight: bold;
+    font-size: 40px;
+}
+.clgName p{
+    font-size: 23px;
+    margin-left: 10vw;
+    margin-top: -2vh;
+}
+
+.logo{
+    width: 10vw;
+    height: 15vh;
+    
+
+}
+
+.navBar{
+    background-color: #252525;
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    margin-left: -1vw;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li{
+    
+    line-height: 50px;
+    font-size: 20px;
+    margin-right: 40px;
+    display: inline-block;
+    list-style: none;
+}
+nav ul li a{
+    font-size: 24px;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+
+}
+nav ul li a:hover{
+    color: #ffc107;
+}
+
+.imageStrip img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.textOverlay {
+    padding-right: 0;
+    left: auto;
+    position: absolute;
+    top: 35%;
+    left: 0%; 
+    background-color: #494848;
+    width: 99vw;
+    height: 20vh;
+    color: #fff; 
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.textOverlay h1 {
+    font-size: 36px;
+    
+}
+
+
+
+
+
+
+
