@@ -3,11 +3,7 @@ body{
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
 }
-.container{
-    position: relative;
-    width: auto;
-    height: 100vh;
-}
+
 .logoNav{
     display: flex;
     align-items: center;
@@ -71,8 +67,9 @@ nav ul li a:hover{
 .textOverlay {
     left: auto;
     position: absolute;
-    top: 30%;
-    left: 0%; 
+    top: 29%;
+    left: 0%;
+    z-index: 1000; 
     background-color: #323232;
     width: 99vw;
     height: 15vh;
@@ -132,9 +129,7 @@ nav ul li a:hover{
     font-size: 24px;
     margin-left: 10vw;
 }
-.collapsible{
-    overflow: hidden;
-}
+
 .collapsibleText{
     width: 70vw;
     margin-left: 7vw;
@@ -143,6 +138,9 @@ nav ul li a:hover{
     overflow: hidden;
     opacity: 0.5;
     transition: all 0.3s ease;
+}
+.collapsible{
+    overflow: hidden;
 }
 .collapsible label{
     font-size: 30px;
@@ -156,6 +154,13 @@ nav ul li a:hover{
     align-items: center;
     width: 65vw;
     cursor: pointer;
+    transition: background 0.3s;
+}
+.collapsible label:hover{
+    background-color: #766e6e;
+    font-size: 34px;
+    width: 70vw;
+    margin: 5vh 12vw;
 }
 .collapsible input:checked ~ .collapsibleText{
     max-height: 35vh;
@@ -165,6 +170,7 @@ nav ul li a:hover{
 .collapsible input{
     display: none;
 }
+
 footer{
     background-color: #212529;
     color: white;
@@ -184,92 +190,85 @@ footer{
 }
 
 /*Department page styling*/
-.dept-Toggle{
+.dept{
+    padding: 20px;
     margin-block-start: 0;
-    background-image: url("clgbg.jpg");
+    background-image: url("./images/clgbg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     backdrop-filter: blur(10px);
     
 }
 
-.dept-Toggle ul li{
+.dept-Toggle li{
     padding: 20px;
     margin-top: 20vh;
     list-style: none;
-    font-size: 28px;
+    font-size: 24px;
+    font-weight: 700;
     margin-left: 30vw;
     background-color: #ffc107;
     
     
 }
-.ce{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin-block-start: 10vh;
-    margin-bottom: 10vh;
-    border-radius: 38px;
-    align-items: center;
-    width: 30vw;
+.dept-Toggle li:hover{
+    background-color: #a98007;
+    padding: 25px;
+
 }
-.me{
+
+.imgContainer{
     display: flex;
     flex-direction: column;
     padding: 10px;
     border-radius: 38px;
-    margin: 25px;
     align-items: center;
-    width: 30vw;
+    width: 25vw;
+    height: 40vh;
 }
-.en{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border-radius: 38px;
-    margin: 25px;
-    align-items: center;
-    width: 30vw;
-}
-.cs{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border-radius: 38px;
-    margin: 25px;
-    align-items: center;
-    width: 30vw;
-}
-.ca{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border-radius: 38px;
-    margin: 25px;
-    align-items: center;
-    width: 30vw;
-}
+
 .dropImg img{
     transition: max-height 0.5s, padding 0.5s;
-    width: 30vw;
+    width: 18vw;
     height: 30vh;
-    padding: 5px;
+    padding: 24px;
+    border-radius: 42px;
 }
 
 /*Library page css*/
 
+.imgSection{
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    margin-block-start: 0;
+    background-image: url("./images/clgbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    height: 100%;
+    width: 100%;
+    animation: change 25s infinite ease-in-out;
+}
+
 .lib-Bar{
+    position: relative;
+    margin-top: 10vh;
     margin-block-start: 30vh;
+    margin-block-end: 5vh;
     background-color: #ffc107;
-    width: 20vw;
+    width: 15vw;
     border-radius: 0px 50px 50px 0px;
+    
 }
 .lib-Bar li{
     line-height: 50px;
     padding: 20px;
+   
 
 }
 .lib-Bar ul li{
+    
     list-style: none;
     color: #323232;
     font-weight: bold;
@@ -277,9 +276,61 @@ footer{
 .lib-Bar ul li a{
     color: #323232;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 28px;
+    font-size: 22px;
+    
     
 }
+.libContent{
+    background-color: white;
+    width: max-content;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 40px;
+    margin-left: 25vw;
+    margin-top: -65vh;
+    margin-block-end: 10vh;
+    
+}
+.libContent img{
+    padding: 10px;
+    margin-left: 10vw;
+    width: 45vw;
+    height: 40vh;
+    border-radius: 40px;
+
+}
+.libContent h1{
+    color: black;
+    line-height: 70px;
+    padding-top: 10px;
+    padding-left: 5px;
+    margin-left: 5vw;
+    margin-top: 2vh;
+}
+.libContent h2{
+    color: brown;
+    margin-left: 10vw;
+}
+.libContent p{
+    line-height: 25px;
+    font-size: 20px;
+    margin-left: 10vw;
+}
+@keyframes change{
+    25%{
+        background-image: url("./images/img1.jpeg");
+    }
+    50%{
+        background-image: url("./images/img2.jpg");
+    }
+    75%{
+        background-image: url("./images/img3.jpg");
+    }
+    100%{
+        background-image: url("./images/img4.jpg");
+    }
+}
+
 
 
 
