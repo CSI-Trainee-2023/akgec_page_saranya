@@ -21,21 +21,21 @@ body{
     
     
 }
-h1{
-    margin-left: 10vw;
+.clgName h1{
+    margin-left: 16vw;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
 }
 .clgName p{
-    font-size: 23px;
-    margin-left: 10vw;
+    font-size: 20px;
+    margin-left: 16vw;
     margin-top: -2vh;
 }
 
 .logo{
     width: 10vw;
-    height: 15vh;
-    
+    height: 12vh;
+    margin-top: 2vh;
 
 }
 
@@ -69,16 +69,14 @@ nav ul li a:hover{
 }
 
 .textOverlay {
-    padding-right: 0;
     left: auto;
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 0%; 
     background-color: #323232;
     width: 99vw;
-    height: 20vh;
+    height: 15vh;
     color: #ffc107;
-    padding: 20px;
     text-align: center;
     justify-content: center;
     padding: 0;
@@ -87,85 +85,87 @@ nav ul li a:hover{
 
 .textOverlay h1 {
     font-size: 36px;
-    margin-top: 6vh;
-    margin-right: 12vw;
+    margin-top: 4vh;
+    margin-right: 5vw;
 }
 .abtContent{
     display: block;
     padding: 150px;
+    border-bottom: solid 2px #766e6e;
+    margin-bottom: 15vh;
 }
 .abtContent h1{
-    margin-left: 13vw;
-    margin-top: 10vw;
+    margin-left: 17vw;
+    margin-top: 5vh;
 }
 .abtContent p {
-    margin-top: 5vw;
+    margin-top: 7vh;
     text-align: justify;
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 30px;
-    border-bottom: solid 2px #766e6e;
-
+    
 }
+
 .abtContent span{
     line-height: 30px;
     text-align: justify;
-    margin-left: 10vw;
+    
     font-size: 18px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
     
 }
-.highlights{
+.wrap{
     background-color: #d5d3d3ad;
-    margin-block-start: -10vh;
+    margin-block-start: -15vh;
     padding: 20px;
 }
-.highlights h1{
+.wrap h1{
+    margin-left: 36vw;
     padding: 10px;
     margin-bottom: 5vh;
+    font-size: 48px;
 }
-.highlights ul li{
-    list-style: none;
-    font-size: 28px;
-    margin-left: 10vw;
-    background-color: #ffc107;
-    
-}
-
-.high-Toggle ul li{
+.wrap ul li{
     list-style: disc;
-    padding: 20px;
+    font-size: 24px;
+    margin-left: 10vw;
 }
-
-.mS{
+.collapsible{
+    overflow: hidden;
+}
+.collapsibleText{
+    width: 70vw;
+    margin-left: 7vw;
+    text-align: justify;
+    max-height: 1vh;
+    overflow: hidden;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+.collapsible label{
+    font-size: 30px;
+    font-weight: 600;
+    background-color: #ffc107;
     display: flex;
     flex-direction: column;
     padding: 10px;
     border-radius: 38px;
-    margin: 25px;
+    margin: 5vh 15vw;
     align-items: center;
-    width: 70vw;
+    width: 65vw;
+    cursor: pointer;
 }
-.recs{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border-radius: 38px;
-    margin: 25px;
-    align-items: center;
-    width: 70vw;
+.collapsible input:checked ~ .collapsibleText{
+    max-height: 35vh;
+    padding-bottom: 20px;
+    opacity: 1;
 }
-.inn{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    border-radius: 38px;
-    margin: 25px;
-    align-items: center;
-    width: 70vw;
+.collapsible input{
+    display: none;
 }
-.end{
+footer{
     background-color: #212529;
     color: white;
     display: flex;
@@ -187,26 +187,28 @@ nav ul li a:hover{
 .dept-Toggle{
     margin-block-start: 0;
     background-image: url("clgbg.jpg");
-    margin-top: 30vh;
     background-size: cover;
     background-repeat: no-repeat;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(10px);
+    
 }
 
 .dept-Toggle ul li{
     padding: 20px;
-    margin-block-start: 8vh;
-    margin-block-end: 8vh;
+    margin-top: 20vh;
     list-style: none;
     font-size: 28px;
     margin-left: 30vw;
     background-color: #ffc107;
+    
     
 }
 .ce{
     display: flex;
     flex-direction: column;
     padding: 10px;
+    margin-block-start: 10vh;
+    margin-bottom: 10vh;
     border-radius: 38px;
     align-items: center;
     width: 30vw;
@@ -247,7 +249,7 @@ nav ul li a:hover{
     align-items: center;
     width: 30vw;
 }
-.toggle .dropImg img{
+.dropImg img{
     transition: max-height 0.5s, padding 0.5s;
     width: 30vw;
     height: 30vh;
